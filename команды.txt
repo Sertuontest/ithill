@@ -1,0 +1,46 @@
+First tuning 
+
+1) указать первоначальные настройки 
+   git config --system - для всего сервера
+          ~   --global - для выбранного юзера
+          ~   --local  - для конкретной репы
+пример 
+$ git config --global user.name Serhii Hordieiev
+$ git config --global user.email yousergor@gmail.com
+
+2) git init - создание локальной репы
+3) git log -p - вывод подробной инфы
+4) git restore filename- восстановление файла на последний коммит
+5) git diff filename - показать изменения файла
+   git diff --staged - показать изменения в индексе
+6) git commit -m "Это комент для комита " - бест практис писать коменты к каждому комиту 
+7) git commit -am "параметр -а говорит добавить файл типа сделать add"
+8) git mv filename1 filename2 - переименование или перемещение файла
+9) git rm filename - удаление файла
+10) .gitignore - бест практис - создать файл в самом начале создания проекта для игнорирования списка ненужных файлов или папок в репе
+11) git branch -d branchname - удаление ненужной ветки
+12 ) git merge namebranch- слияние веток 
+13) git checkout -b namebranch - создание новой ветки и перемещение заголовка HEAD на него, т.е. переключение на эту новую ветку
+14)  git checkout -b namebranch heshsumm_commit - переход на нужный коммит в нужной ветке
+15) git reset --hard heshsumm - переход на нужный коммит 
+16) git pull - обновление репы на локальном компе
+17) git push --set-upstream origin main - для связывания ветки локальной репы с удалённой, чтобы каждый раз не писать "git push origin main", а просто "git push"
+
+
+…or create a new repository on the command line
+echo "# ithillel" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Sertuon/ithillel.git
+git push -u origin main
+========================
+…or push an existing repository from the command line
+git remote add origin https://github.com/Sertuon/ithillel.git
+git branch -M main
+git push -u origin main
+=========================
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
